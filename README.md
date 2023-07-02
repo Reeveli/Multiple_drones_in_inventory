@@ -14,20 +14,20 @@ Class names of added vehicles:
     "Rev_darter_o",
     "Rev_darter_i",
     "Rev_darter_c",
-        "Rev_pelican_b",
-        "Rev_pelican_o",
-        "Rev_pelican_i",
-        "Rev_pelican_c",
-        "Rev_demine_b",
-        "Rev_demine_o",
-        "Rev_demine_i",
-        "Rev_demine_c",
+    "Rev_pelican_b",
+    "Rev_pelican_o",
+    "Rev_pelican_i",
+    "Rev_pelican_c",
+    "Rev_demine_b",
+    "Rev_demine_o",
+    "Rev_demine_i",
+    "Rev_demine_c",
         
         
-        //world inventory items
-        "Rev_darter_packed",
-        "Rev_pelican_packed",
-        "Rev_demine_packed"
+    //world inventory items
+    "Rev_darter_packed",
+    "Rev_pelican_packed",
+    "Rev_demine_packed"
 Class names of added inventory items:
 
     //cfgWeapons
