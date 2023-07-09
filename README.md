@@ -34,14 +34,14 @@ Class names of added vehicles:
     "Rev_darter_packed",
     "Rev_pelican_packed",
     "Rev_demine_packed",
-		"Item_Rev_Designator"
+    "Item_Rev_Designator"
 Class names of added inventory items:
 
     //cfgWeapons
     "Rev_darter_item",
     "Rev_pelican_item",
     "Rev_demine_item",
-		"Rev_Designator"
+    "Rev_Designator"
 
 ## License
 Scripts included in this repository are under [APL-SA](https://www.bohemia.net/community/licenses/arma-public-license-share-alike) license.
