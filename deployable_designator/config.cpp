@@ -28,8 +28,8 @@ class CfgPatches
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
         version = 1.0;
-        versionStr = "1.0";
-        versionAr[] = {1, 0};
+        versionStr = "1.0.1";
+        versionAr[] = {1, 0, 1};
 	};
 };
 
@@ -63,7 +63,25 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Item_Rev_Designator"};
+			dissasembleTo[] = {};
+
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble designator";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_designator_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};
 
 	};
@@ -79,44 +97,97 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Item_Rev_Designator"};
+			dissasembleTo[] = {};
+
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble designator";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_designator_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};
 	};
 	class B_W_Static_Designator_01_F;
 	class I_Rev_Designator: B_W_Static_Designator_01_F
 	{
+		author = "Reeveli";
+		crew = "I_UAV_AI_F";
+		displayname = "Deployable Designator [AAF]";
+		editorSubcategory = "EdSubcat_Turrets";
+		faction = "IND_F";
+		side = 2;
 		class assembleInfo
 		{
 			primary = 0;
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Item_Rev_Designator"};
+			dissasembleTo[] = {};
+
 		};
-		author = "Reeveli";
-		crew = "I_UAV_AI_F";
-		displayname = "Deployable Designator [LDF]";
-		editorSubcategory = "EdSubcat_Drones";
-		faction = "IND_E_F";
-		side = 2;
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble designator";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_designator_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};
 	};
 	class C_Rev_Designator: B_Static_Designator_01_F
 	{
+		author = "Reeveli";
+		crew = "C_UAV_AI_F";
+		displayname = "Deployable Designator [IDAP]";
+		editorSubcategory = "EdSubcat_Turrets";
+		faction = "CIV_IDAP_F";
+		side = 3;
 		class assembleInfo
 		{
 			primary = 0;
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Item_Rev_Designator"};
-		};
-		author = "Reeveli";
-		crew = "C_UAV_AI_F";
-		displayname = "Deployable Designator [Civilian]";
-		editorSubcategory = "EdSubcat_Drones";
-		faction = "CIV_F";
-		side = 3;
+			dissasembleTo[] = {};
 
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble designator";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_designator_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};
 	};
 };
 
@@ -150,6 +221,7 @@ class CfgFunctions
 			class arsenal {preInit=1;};
 			class deploy {};
 			class init {preInit=1;};
+			class pick_up;
 		};
 	};
 };

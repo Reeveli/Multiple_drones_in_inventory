@@ -38,8 +38,8 @@ class CfgPatches
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
         version = 2.0;
-        versionStr = "2.0";
-        versionAr[] = {2, 0};
+        versionStr = "2.0.1";
+        versionAr[] = {2, 0,1};
 	};
 };
 
@@ -58,9 +58,26 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_darter_packed"};
+			dissasembleTo[] = {};
 
-		};
+		};	
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};	
 	};
 	class O_UAV_01_F;
 	class Rev_darter_o: O_UAV_01_F
@@ -74,9 +91,26 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_darter_packed"};
+			dissasembleTo[] = {};
 
-		};	
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};		
 	};
 	class I_UAV_01_F;
 	class Rev_darter_i: I_UAV_01_F
@@ -90,8 +124,25 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_darter_packed"};
+			dissasembleTo[] = {};
 
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};		
 	};
 	class C_IDAP_UAV_01_F;
@@ -106,9 +157,26 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_darter_packed"};
+			dissasembleTo[] = {};
 
-		};	
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};		
 	};
 
 	class B_UAV_06_F;
@@ -123,10 +191,28 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_pelican_packed"};
+			dissasembleTo[] = {};
 
-		};	
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};		
 	};
+
 	class O_UAV_06_F;
 	class Rev_pelican_o: O_UAV_06_F
 	{
@@ -139,10 +225,28 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_pelican_packed"};
+			dissasembleTo[] = {};
 
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};		
 	};
+
 	class I_UAV_06_F;
 	class Rev_pelican_i: I_UAV_06_F
 	{
@@ -155,25 +259,61 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_pelican_packed"};
+			dissasembleTo[] = {};
 
-		};	
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};		
 	};
+
 	class C_UAV_06_F;
 	class Rev_pelican_c: C_UAV_06_F
 	{
 		author = "Reeveli";
 		displayName = "Deployable AL-6 Pelican";
 		Rev_uav_class = "utility";
+		faction = "CIV_IDAP_F";
 		class assembleInfo
 		{
 			primary = 0;
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_pelican_packed"};
+			dissasembleTo[] = {};
 
-		};	
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};		
 	};
 
 	class C_IDAP_UAV_06_antimine_F;
@@ -190,8 +330,25 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_demine_packed"};
+			dissasembleTo[] = {};
 
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};
 	};
 	class Rev_demine_o: C_IDAP_UAV_06_antimine_F
@@ -207,8 +364,25 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_demine_packed"};
+			dissasembleTo[] = {};
 
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};
 	};
 	class Rev_demine_i: C_IDAP_UAV_06_antimine_F
@@ -224,8 +398,25 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_demine_packed"};
+			dissasembleTo[] = {};
 
+		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
 		};
 	};
 	class Rev_demine_c: C_IDAP_UAV_06_antimine_F
@@ -239,11 +430,27 @@ class CfgVehicles
 			base = "";
 			assembleTo = "";
 			displayName = "";
-			dissasembleTo[] = {"Rev_demine_packed"};
+			dissasembleTo[] = {};
 
 		};
+		class UserActions
+		{
+			class pick_up
+			{
+				userActionID = 52;
+				displayName = "Dissassemble UAV";
+				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble UAV</t>";
+				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
+				statement = "[this] call Rev_uav_fnc_pick_up";
+				position = "";
+				priority = 5;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 1;
+			};
+		};
 	};
-	
 	class Item_ToolKit;
 	class Rev_darter_packed: Item_ToolKit
 	{
@@ -343,6 +550,7 @@ class CfgFunctions
 			file="\deployable_darter\functions";
 			class uav_init {postInit=1;};
 			class deploy_uav {};
+			class pick_up {};
 		};
 	};
 };
