@@ -1,38 +1,3 @@
-class CfgPatches
-{
-	class deployable_designator
-	{
-		name="Deployable Laser Designator";
-		units[]=
-		{
-			"B_Rev_Designator",
-			"O_Rev_Designator",
-			"I_Rev_Designator",
-			"C_Rev_Designator",
-			"Item_Rev_Designator"
-		};
-		weapons[]=
-		{
-			"Rev_Designator"
-		};
-		requiredVersion=1;
-		requiredAddons[]=
-		{
-			"A3_Static_F_Mark_Designator_01",
-			"A3_Static_F_Enoch_Designator_01",
-			"cba_main",
-			"deployable_darter"
-		};
-		author="Reeveli";
-		authors[]= {"Reeveli"};
-		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
-		url = "https://www.youtube.com/@Reeveli";			
-        version = 1.0;
-        versionStr = "1.0.1";
-        versionAr[] = {1, 0, 1};
-	};
-};
-
 class CfgVehicles
 {
 
@@ -47,6 +12,23 @@ class CfgVehicles
 			{
 				name = "Rev_Designator";
 				count = 1;
+			};
+		};
+		class UserActions
+		{
+			class Rev_assemble
+			{
+				userActionID = 52;
+				displayName = "Assemble UAV";
+				displayNameDefault = "<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Assemble UAV</t>";
+				condition = "alive this";
+				statement = "[player,typeOf this,this] call Rev_designator_fnc_deploy";
+				position = "";
+				priority = 1;
+				radius = 1.8;
+				animPeriod = 2;
+				onlyForplayer = 1;
+				showWindow = 0;
 			};
 		};
 	};
@@ -71,10 +53,10 @@ class CfgVehicles
 			class pick_up
 			{
 				userActionID = 52;
-				displayName = "Dissassemble designator";
-				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				displayName = "Dissassemble Designator";
+				displayNameDefault = "<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Dissassemble Designator</t>";
 				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
-				statement = "[this] call Rev_designator_fnc_pick_up";
+				statement = "[this,'Item_Rev_Designator'] call Rev_uav_fnc_pick_up";
 				position = "";
 				priority = 5;
 				radius = 1.8;
@@ -105,10 +87,10 @@ class CfgVehicles
 			class pick_up
 			{
 				userActionID = 52;
-				displayName = "Dissassemble designator";
-				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				displayName = "Dissassemble Designator";
+				displayNameDefault = "<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Dissassemble Designator</t>";
 				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
-				statement = "[this] call Rev_designator_fnc_pick_up";
+				statement = "[this,'Item_Rev_Designator'] call Rev_uav_fnc_pick_up";
 				position = "";
 				priority = 5;
 				radius = 1.8;
@@ -141,10 +123,10 @@ class CfgVehicles
 			class pick_up
 			{
 				userActionID = 52;
-				displayName = "Dissassemble designator";
-				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				displayName = "Dissassemble Designator";
+				displayNameDefault = "<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Dissassemble Designator</t>";
 				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
-				statement = "[this] call Rev_designator_fnc_pick_up";
+				statement = "[this,'Item_Rev_Designator'] call Rev_uav_fnc_pick_up";
 				position = "";
 				priority = 5;
 				radius = 1.8;
@@ -176,10 +158,10 @@ class CfgVehicles
 			class pick_up
 			{
 				userActionID = 52;
-				displayName = "Dissassemble designator";
-				displayNameDefault = "<t align='center'><img image='\A3\Ui_f\data\IGUI\Cfg\Actions\reload_ca.paa' size='2' /><br/></t><t align='center'>Dissassemble designator</t>";
+				displayName = "Dissassemble Designator";
+				displayNameDefault = "<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Dissassemble Designator</t>";
 				condition = "alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";
-				statement = "[this] call Rev_designator_fnc_pick_up";
+				statement = "[this,'Item_Rev_Designator'] call Rev_uav_fnc_pick_up";
 				position = "";
 				priority = 5;
 				radius = 1.8;
@@ -187,41 +169,6 @@ class CfgVehicles
 				onlyForplayer = 1;
 				showWindow = 1;
 			};
-		};
-	};
-};
-
-class CfgWeapons
-{
-	class ToolKit;
-	class Rev_Designator: ToolKit
-	{
-		author = "Reeveli";
-		picture = "\A3\Weapons_F_Mark\Data\UI\gear_laserdesignator_ca.paa";
-		displayName = "Deployable remote designator";
-		descriptionShort = "Inventory item<br/>Douple click on the item to access menu";
-		class ItemInfo
-		{
-			mass = 100;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-			type = 620;
-			allowedSlots[] = {801,701,901};
-			scope = 0;
-		};
-	};
-};
-
-class CfgFunctions
-{
-	class Rev_designator
-	{
-		class designator
-		{
-			file= "x\Rev\addons\designator\functions";
-			class arsenal {preInit=1;};
-			class deploy {};
-			class init {preInit=1;};
-			class pick_up;
 		};
 	};
 };
