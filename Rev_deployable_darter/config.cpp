@@ -37,9 +37,9 @@ class CfgPatches
 		authors[]= {"Reeveli"};
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
-        version = 3.0;
-        versionStr = "3.0.0";
-        versionAr[] = {3,0,0};
+        version = 3.1;
+        versionStr = "3.1.0";
+        versionAr[] = {3,1,0};
 	};
 };
 

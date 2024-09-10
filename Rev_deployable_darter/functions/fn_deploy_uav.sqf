@@ -15,6 +15,8 @@
  * Example:
  * [_unit,_item] call Rev_uav_fnc_deploy_uav;
  *
+ 2.1
+    Removed old CBA EH call at function end
  2.0
     All vehicle & weapon classes renamed with mod rewrite
     New code for spawning drone on the ground
@@ -114,7 +116,5 @@ _unit setDir _dir;
 private _anim = if (stance _unit == "STAND") then {"AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"} else {"AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"};
 [_unit, _anim] remoteExec ["switchMove", 0];
 
-
-["Rev_deployable_darter_EH", [_unit]] call CBA_fnc_localEvent;
 
 true;
