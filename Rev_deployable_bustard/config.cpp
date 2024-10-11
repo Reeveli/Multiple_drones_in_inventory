@@ -25,7 +25,7 @@ class CfgPatches
 		{
 			"A3_Drones_F",
 			"data_f_lxWS_Loadorder",
-			"cba_main",
+			"cba_ui",
 			"Rev_deployable_darter"
 		};
 		author="Reeveli";
@@ -33,9 +33,9 @@ class CfgPatches
 		name="Deployable AP-5 Bustard";
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
-        version = 1.0;
-        versionStr = "1.0.0";
-        versionAr[] = {1,0,0};
+        version = 1.1;
+        versionStr = "1.1.0";
+        versionAr[] = {1,1,0};
 		skipWhenMissingDependencies = 1;
 	};
 };

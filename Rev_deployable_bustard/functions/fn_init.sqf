@@ -7,19 +7,23 @@
  *
  * Return Value: <NONE>
  *
+ 1.1
+    Workarounds for unknown bug caused by latest CBA release
+        All '_unit' parameters replaced with player
+        All context actions are now non-consumbale
  */
 
 if !(hasInterface) exitWith {};
 
-["Rev_Bustard", ["CONTAINER","CLOTHES"], ["Assemble UAV"], [], "", [{true},{params ["_unit", "_container", "_item", "_slot", "_params"];_unit == vehicle _unit}], {  
+["Rev_Bustard", ["CONTAINER","CLOTHES"], ["Assemble UAV"], [], "", [{true},{player call CBA_fnc_canUseWeapon}], {  
     params ["_unit", "_container", "_item", "_slot", "_params"]; 
-    [_unit,_item] call Rev_bustard_fnc_deploy;
-},true] call CBA_fnc_addItemContextMenuOption;
+    [player,_item] call Rev_bustard_fnc_deploy;
+},false] call CBA_fnc_addItemContextMenuOption;
 
-["Rev_UAV_IED", ["CONTAINER","CLOTHES"], ["Assemble UAV"], [], "", [{true},{params ["_unit", "_container", "_item", "_slot", "_params"];_unit == vehicle _unit}], {  
+["Rev_UAV_IED", ["CONTAINER","CLOTHES"], ["Assemble UAV"], [], "", [{true},{player call CBA_fnc_canUseWeapon}], {  
     params ["_unit", "_container", "_item", "_slot", "_params"]; 
-    [_unit,_item] call Rev_bustard_fnc_deploy;
-},true] call CBA_fnc_addItemContextMenuOption;
+    [player,_item] call Rev_bustard_fnc_deploy;
+},false] call CBA_fnc_addItemContextMenuOption;
 
 
 //Ace actions

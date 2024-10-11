@@ -13,6 +13,8 @@
  * Example:
  * [_unit,_item] call Rev_bustard_fnc_deploy;
  *
+ 1.1
+    New item removal code as workaround of CBA bug
  */
 
 if !(hasInterface) exitWith {false;};
@@ -76,6 +78,8 @@ private _vehicletype = switch (_item) do
 };
 
 if !(isNull _object) then {deleteVehicle _object};
+//Added in 1.1
+_unit removeItem _item;
 
 private _uav = createVehicle [_vehicletype, _unit getRelPos [1,0]];
 createVehicleCrew _uav;
