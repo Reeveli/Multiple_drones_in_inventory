@@ -15,6 +15,8 @@
  * Example:
  * [_unit,_item] call Rev_uav_fnc_deploy_uav;
  *
+ 2.2
+    New item removal code as workaround of CBA bug
  2.1
     Removed old CBA EH call at function end
  2.0
@@ -107,7 +109,8 @@ private _vehicletype = switch (_item) do
 };
 
 if !(isNull _object) then {deleteVehicle _object};
-
+//Added in 2.2
+_unit removeItem _item;
 
 private _uav = createVehicle [_vehicletype, _unit getRelPos [1,0]];
 createVehicleCrew _uav;

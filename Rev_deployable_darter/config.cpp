@@ -31,15 +31,15 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"A3_Drones_F",
-			"cba_main"
+			"cba_ui"
 		};
 		author="Reeveli";
 		authors[]= {"Reeveli"};
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
-        version = 3.1;
-        versionStr = "3.1.0";
-        versionAr[] = {3,1,0};
+        version = 3.2;
+        versionStr = "3.2.0";
+        versionAr[] = {3,2,0};
 	};
 };
 

@@ -8,6 +8,10 @@
  *
  * Return Value: <NONE>
  *
+ 2.1
+    Workarounds for unknown bug caused by latest CBA release
+        All '_unit' parameters replaced with player
+        All context actions are now non-consumbale
  2.0
     All weapon classes renamed with mod rewrite
     Added Ace actions
@@ -15,20 +19,20 @@
 
 if !(hasInterface) exitWith {};
 
-["Rev_Darter", ["CONTAINER","CLOTHES"], ["Deploy UAV"], [], "", [{true},{params ["_unit", "_container", "_item", "_slot", "_params"];_unit == vehicle _unit}], {  
+["Rev_Darter", ["CONTAINER","CLOTHES"], ["Deploy UAV"], [], "", [{true},{player call CBA_fnc_canUseWeapon}], {  
     params ["_unit", "_container", "_item", "_slot", "_params"]; 
-    [_unit,_item] call Rev_uav_fnc_deploy_uav;
-},true] call CBA_fnc_addItemContextMenuOption;
+    [player,_item] call Rev_uav_fnc_deploy_uav;
+},false] call CBA_fnc_addItemContextMenuOption;
 
-["Rev_Pelican", ["CONTAINER","CLOTHES"], ["Deploy UAV"], [], "", [{true},{params ["_unit", "_container", "_item", "_slot", "_params"];_unit == vehicle _unit}], {  
+["Rev_Pelican", ["CONTAINER","CLOTHES"], ["Deploy UAV"], [], "", [{true},{player call CBA_fnc_canUseWeapon}], {  
     params ["_unit", "_container", "_item", "_slot", "_params"]; 
-    [_unit,_item] call Rev_uav_fnc_deploy_uav;
-},true] call CBA_fnc_addItemContextMenuOption;
+    [player,_item] call Rev_uav_fnc_deploy_uav;
+},false] call CBA_fnc_addItemContextMenuOption;
 
-["Rev_Demine", ["CONTAINER","CLOTHES"], ["Deploy UAV"], [], "", [{true},{params ["_unit", "_container", "_item", "_slot", "_params"];_unit == vehicle _unit}], {  
+["Rev_Demine", ["CONTAINER","CLOTHES"], ["Deploy UAV"], [], "", [{true},{player call CBA_fnc_canUseWeapon}], {  
     params ["_unit", "_container", "_item", "_slot", "_params"]; 
-    [_unit,_item] call Rev_uav_fnc_deploy_uav;
-},true] call CBA_fnc_addItemContextMenuOption;
+    [player,_item] call Rev_uav_fnc_deploy_uav;
+},false] call CBA_fnc_addItemContextMenuOption;
 
 
 //Ace actions
