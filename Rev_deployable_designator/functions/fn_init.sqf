@@ -8,6 +8,10 @@
  *
  * Return Value: <NONE>
  *
+ 1.2
+    Workarounds for unknown bug caused by latest CBA release
+        All '_unit' parameters replaced with player
+        All context actions are now non-consumbale
  1.1
     Updated outdated header info
     Added code for Ace interactions
@@ -15,10 +19,10 @@
 
 if !(hasInterface) exitWith {};
 
-["Rev_Designator", ["CONTAINER","CLOTHES"], ["Assemble designator"], [], "", [{true},{params ["_unit", "_container", "_item", "_slot", "_params"];_unit == vehicle _unit}], {  
+["Rev_Designator", ["CONTAINER","CLOTHES"], ["Assemble designator"], [], "", [{true},{player call CBA_fnc_canUseWeapon}], {  
     params ["_unit", "_container", "_item", "_slot", "_params"]; 
-    [_unit,_item] call Rev_designator_fnc_deploy;
-},true] call CBA_fnc_addItemContextMenuOption;
+    [player,_item] call Rev_designator_fnc_deploy;
+},false] call CBA_fnc_addItemContextMenuOption;
 
 //Ace actions
 if !(isClass (configFile >> "CfgPatches" >> "ace_interaction")) exitWith {};

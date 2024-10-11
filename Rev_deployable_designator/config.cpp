@@ -20,16 +20,16 @@ class CfgPatches
 		{
 			"A3_Static_F_Mark_Designator_01",
 			"A3_Static_F_Enoch_Designator_01",
-			"cba_main",
+			"cba_ui",
 			"Rev_deployable_darter"
 		};
 		author="Reeveli";
 		authors[]= {"Reeveli"};
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
-        version = 1.0;
-        versionStr = "1.0.2";
-        versionAr[] = {1, 0, 2};
+        version = 1.2;
+        versionStr = "1.2.0";
+        versionAr[] = {1, 2, 0};
 	};
 };
 

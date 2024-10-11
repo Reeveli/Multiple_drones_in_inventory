@@ -14,6 +14,8 @@
  * Example:
  * [player,this] call Rev_designator_fnc_deploy;
  *
+ 1.3
+    New item removal code as workaround of CBA bug    
  1.2
     Unified code with Rev_uav_fnc_deploy_uav
         New code for spawning drone on the ground
@@ -68,6 +70,8 @@ private _vehicletype = switch (_item) do
 };
 
 if !(isNull _object) then {deleteVehicle _object};
+//Added in 1.3
+_unit removeItem _item;
 
 private _uav = createVehicle [_vehicletype, _unit getRelPos [1,0]];
 createVehicleCrew _uav;
