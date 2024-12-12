@@ -8,6 +8,9 @@
  *
  * Return Value: <NONE>
  *
+ 2.2
+    ACE arsenal category -functions are now called here to keep them pre-init
+        Old arsenal standalone function repurposed
  2.1
     Workarounds for unknown bug caused by latest CBA release
         All '_unit' parameters replaced with player
@@ -92,3 +95,23 @@ private _asassemble =
 ["Item_Rev_Darter", 0, ["ACE_MainActions"], _asassemble,false] call ace_interact_menu_fnc_addActionToClass;
 ["Item_Rev_Pelican", 0, ["ACE_MainActions"], _asassemble,false] call ace_interact_menu_fnc_addActionToClass;
 ["Item_Rev_Demine", 0, ["ACE_MainActions"], _asassemble,false] call ace_interact_menu_fnc_addActionToClass;
+
+
+//Item list for ACE arsenal custom category
+if !(isClass (configFile >> "CfgPatches" >> "ace_arsenal")) exitWith {};
+
+private _drones = [
+	"Rev_Darter",
+	"Rev_Pelican",
+	"Rev_Demine"
+];
+
+//In future these should probably be embeded back to their own mods
+if (isClass (configFile >> "CfgPatches" >> "Rev_deployable_designator")) then {_drones pushBackUnique "Rev_Designator"};
+if (isClass (configFile >> "CfgPatches" >> "Rev_deployable_ED")) then {_drones pushBackUnique "Rev_Pelter";_drones pushBackUnique "Rev_Roller"};
+if (isClass (configFile >> "CfgPatches" >> "Rev_deployable_bustard")) then {_drones pushBackUnique "Rev_Bustard";_drones pushBackUnique "Rev_UAV_IED"};
+
+private _id = [_drones, "Drones", "a3\drones_f\air_f_gamma\uav_01\data\ui\uav_01_ca.paa", -1] call ace_arsenal_fnc_addRightPanelButton;
+
+missionNameSpace setvariable ["Rev_uav_arsenalList",_drones,false];
+missionNameSpace setvariable ["Rev_uav_arsenalCategory",_id,false];

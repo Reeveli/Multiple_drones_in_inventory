@@ -37,9 +37,9 @@ class CfgPatches
 		authors[]= {"Reeveli"};
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
-        version = 3.2;
-        versionStr = "3.2.0";
-        versionAr[] = {3,2,0};
+        version = 3.3;
+        versionStr = "3.3.0";
+        versionAr[] = {3,3,0};
 	};
 };
 
@@ -59,7 +59,7 @@ class CfgFunctions
 		class Rev_uav
 		{
 			file="\Rev_deployable_darter\functions";
-			class arsenal {postInit=1;};
+			class arsenal {};
 			class deploy_uav {};
 			class uav_init {preInit=1;};
 			class pick_up {};
