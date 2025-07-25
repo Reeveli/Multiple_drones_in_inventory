@@ -38,8 +38,8 @@ class CfgPatches
 		license = "https://www.bohemia.net/community/licenses/arma-public-license-share-alike";
 		url = "https://www.youtube.com/@Reeveli";			
         version = 3.3;
-        versionStr = "3.3.0";
-        versionAr[] = {3,3,0};
+        versionStr = "3.3.1";
+        versionAr[] = {3,3,1};
 	};
 };
 
